@@ -3,8 +3,8 @@
 
   import { store } from './store/index'
 
-	import Layout from "./сomponents/common/Layout.svelte"
-	import Products from "./сomponents/common/Products.svelte"
+	import Layout from "./components/common/Layout.svelte"
+	import Products from "./components/common/Products.svelte"
 
 	
 	provideStoreon(store)

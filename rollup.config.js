@@ -43,10 +43,11 @@ export default {
       'process.env.NODE_ENV': JSON.stringify(production ? 'production' : 'development')
     }),
 		svelte({
+
 			preprocess: preprocess(),
 			compilerOptions: {
 				// enable run-time checks when not in production
-				dev: !production
+				dev: !production,
 			}
 		}),
 		// we'll extract any component CSS out into

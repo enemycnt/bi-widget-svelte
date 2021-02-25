@@ -39,8 +39,8 @@
     import Categories from "../filters/Categories.svelte"
     import Table from "../grid/Table.svelte"
     import BottomPanel from "./BottomPanel.svelte"
-    $: showedArray = $products.selectedParentMarket === 'starred' ? 'starredData' : 'filteredData'; 
-    $: showedArray = $products.searchQuery.length > 0 ? 'searchedData' : showedArray; 
+    // $: showedArray = $products.selectedParentMarket === 'starred' ? 'starredData' : 'filteredData'; 
+    // $: showedArray = $products.searchQuery.length > 0 ? 'searchedData' : showedArray; 
     onMount(async () => {
       dispatch("products/load");
     });
