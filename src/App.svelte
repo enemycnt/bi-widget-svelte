@@ -1,0 +1,30 @@
+<script>
+	import { provideStoreon } from '@storeon/svelte'
+
+  import { store } from './store/index'
+
+	import Layout from "./сomponents/common/Layout.svelte"
+	import Products from "./сomponents/common/Products.svelte"
+
+	
+	provideStoreon(store)
+</script>
+
+	<Layout>
+		<Products />
+	</Layout>
+
+<style>
+	/* main {
+		text-align: center;
+		padding: 1em;
+		max-width: 240px;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 640px) {
+		main {
+			max-width: none;
+		}
+	} */
+</style>
