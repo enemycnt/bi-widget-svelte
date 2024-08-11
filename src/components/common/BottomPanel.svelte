@@ -1,12 +1,40 @@
+<script lang="ts">
+  import { products, wsConnect, wsDisconnect } from "../../store/products";
+</script>
+
+{#if $products.socketEstablished}
+  <div class="BottomPanel">
+    {#if $products.socketOpen}
+      <button
+        type="button"
+        class="Button"
+        class:primary={true}
+        on:click={() => wsDisconnect()}
+      >
+        Disconnect WebSocket
+      </button>
+    {:else}
+      <button
+        type="button"
+        class="Button"
+        class:primary={false}
+        on:click={() => wsConnect()}
+      >
+        Reconnect WebSocket
+      </button>
+    {/if}
+  </div>
+{/if}
+
 <style type="text/scss">
-  .BottomPanel{
+  .BottomPanel {
     bottom: 0;
     position: sticky;
     background: #fff;
     display: flex;
-    justify-content: center
+    justify-content: center;
   }
-  .Button{
+  .Button {
     background: green;
     color: white;
     font-size: 1em;
@@ -17,34 +45,7 @@
     outline: none;
     cursor: pointer;
     &.primary {
-      background: palevioletred
+      background: palevioletred;
     }
   }
 </style>
-
-<script>
-  import { useStoreon } from "@storeon/svelte";
-  const { dispatch, products } = useStoreon("products");
-
-</script>
-
-{#if $products.socketEstablished}
-  <div class="BottomPanel">
-    {#if $products.socketOpen }
-      <div 
-        class="Button"
-        class:primary={true}
-        on:click={() => dispatch("products/ws/disconnect")}
-      >
-        Disconnect WebSocket
-  </div>
-    {:else}
-      <div 
-      class="Button"
-      class:primary={false}
-      on:click={() => dispatch("products/ws/connect")}>
-        Reconnect WebSocket
-      </div>
-    {/if}
-  </div>
-{/if}
