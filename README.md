@@ -2,20 +2,20 @@
 
 <img src="./static/main.png" width="313" height="365" alt="widget">
 
-Cryptocurrency prices in real-time
-This is Svelte version of widget. ReactJS version avaliable [here](https://github.com/enemycnt/bi-widget)
+Cryptocurrency prices in real-time. [Live version](https://bi-widget-svelte.vercel.app/)
+This is **Svelte** version of widget.
+ReactJS version avaliable [here](https://github.com/enemycnt/bi-widget)
 
 ### Built With
 
-* [Svelte](https://svelte.dev/)
-* [svelte-virtual-list](https://github.com/sveltejs/svelte-virtual-list)
-* [nanostores](https://github.com/nanostores/nanostores)
-* [Testcafe](https://devexpress.github.io/testcafe/)
+- [Svelte](https://svelte.dev/)
+- [svelte-virtual-list](https://github.com/sveltejs/svelte-virtual-list)
+- [nanostores](https://github.com/nanostores/nanostores)
+- [Testcafe](https://devexpress.github.io/testcafe/)
 
 ### Prerequisites
 
 To run the project correctly you need to install [yarn](https://classic.yarnpkg.com/en/docs/install/) and [chrome](https://www.google.com/chrome/) first
-
 
 ### Installing and running
 
@@ -63,9 +63,5 @@ then run in another terminal tab/window
 ```
 pnpm e2e
 ```
+
 It starts testcafe tool and tests category change and text search
-
-
-
-
-
