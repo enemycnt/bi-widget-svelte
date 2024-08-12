@@ -1,6 +1,6 @@
 # Binance widget
 
-<img src="./public/main.png" width="313" height="365" alt="widget">
+<img src="./static/main.png" width="313" height="365" alt="widget">
 
 Cryptocurrency prices in real-time
 This is Svelte version of widget. ReactJS version avaliable [here](https://github.com/enemycnt/bi-widget)
@@ -9,7 +9,7 @@ This is Svelte version of widget. ReactJS version avaliable [here](https://githu
 
 * [Svelte](https://svelte.dev/)
 * [svelte-virtual-list](https://github.com/sveltejs/svelte-virtual-list)
-* [Storeon](https://github.com/storeon/svelte)
+* [nanostores](https://github.com/nanostores/nanostores)
 * [Testcafe](https://devexpress.github.io/testcafe/)
 
 ### Prerequisites
@@ -31,13 +31,13 @@ cd bi-widget
 then install dependencies
 
 ```
-yarn install
+pnpm install
 ```
 
 and finally run the app in dev
 
 ```
-yarn dev
+pnpm dev
 ```
 
 ## Building and running in production mode
@@ -45,23 +45,23 @@ yarn dev
 To create an optimised version of the app:
 
 ```bash
-yarn build
+pnpm build
 ```
 
-You can run the newly built app with `yarn start`.
+You can run the newly built app with `pnpm start`.
 
 ## Running the tests
 
 To run end to end tests you should run app in development mode
 
 ```
-yarn start
+pnpm start
 ```
 
-then run in another terminal tab/window 
+then run in another terminal tab/window
 
 ```
-yarn e2e
+pnpm e2e
 ```
 It starts testcafe tool and tests category change and text search
 
